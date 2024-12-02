@@ -1,7 +1,9 @@
 
 
 function hasNestedProperty(obj, path) {
-
+    if (obj == null || Object.getPrototypeOf(obj) !== Object.prototype || typeof path != 'string') {
+        return 'Try again'
+    }
     if (path.includes('.')) {
         path = path.split('.');
         for (const element of path) {
