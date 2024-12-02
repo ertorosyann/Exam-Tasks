@@ -1,8 +1,6 @@
 function check_operator_and(arg1, arg2) {
     if (Boolean(arg1)) {
-        
         if (Boolean(arg2)) {
-            console.log('!!!!!!!!!!!!!');
             return arg2
         } else if (!Boolean(arg2)) {
             return arg1;
@@ -16,11 +14,11 @@ function check_operator_nullish(arg1, arg2){
     if (arg1 == null ) {
         if (arg2 == null) {
             return null
-        } else if( arg2 == undefined) {
+        } else if (arg2 == undefined) {
             return undefined;
         }
         return arg2;
-    } else if (arg2 == undefined ) {
+    } else if (arg2 == undefined) {
         if (arg1 == null) {
             return arg2;
         } else {
@@ -29,7 +27,6 @@ function check_operator_nullish(arg1, arg2){
     } else {
         return arg1;
     }
-
 }
 
 function check_operator_or(arg1, arg2) {
